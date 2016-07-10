@@ -1,0 +1,42 @@
+#include<stdio.h>
+void main()
+{
+int num1[100],num2[100],n,temp,i,j;
+for(i=0;i<n;i++)
+{
+scanf("%d",&num1[i]);
+num1[i]=num2[i];
+}
+for(j=0;j<n;j++)
+{
+scanf("%d",&num1[j]);
+}
+for(i=0;i<n;i++)
+{
+for(j=0;j<n;j++)
+{
+if(num2[i]>num2[j])
+{
+temp=num1[i];
+num1[i]=num1[j];
+num1[j]=temp;
+temp=num2[i];
+num2[i]=num2[j];
+num2[j]=temp;
+}
+else if(num2[i]==num2[i+1])
+{
+if(num1[i]>num1[j])
+{
+temp=num1[i];
+num1[i]=num1[j];
+num1[j]=temp;
+}
+}
+}
+}
+for(i=0;i<n;i++)
+{
+printf("%d",num1[i]);
+}
+}
